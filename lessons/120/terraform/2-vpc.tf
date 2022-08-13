@@ -19,4 +19,6 @@ resource "google_compute_route" "default_to_internet" {
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google_project_service
 resource "google_project_service" "compute" {
   service = "compute.googleapis.com"
+
+  disable_on_destroy = false
 }
